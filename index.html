@@ -124,6 +124,21 @@ Is an ode.</pre>
       </p>
     </section>
 
+    <section id="utility" class="mb-5">
+        <h2><i class="fa-solid fa-check me-2 text-primary"></i>Check your Isanode</h2>
+        <p>
+            Paste your <em>isanode</em> into the space below and it will be checked for propper syntax:
+        </p>
+        <div class="mb-3">
+            <textarea id="isanodeInput" class="form-control" rows="5" placeholder="Enter your isanode here...">I doat, tackle ads!
+I do attack leads.</textarea>
+            <div class="d-flex gap-2 mt-2">
+              <button id="isanodeCheckBtn" type="button" class="btn btn-sm btn-outline-primary">Check</button>
+              <div id="isanodeStatus" class="form-text text-muted" role="status" aria-live="polite">Syntax status will appear here after checking.</div>
+            </div>
+        </div>
+    </section>
+
     <section id="promotion" class="text-center my-5">
       <h2><i class="fa-solid fa-bullhorn me-2 text-primary"></i>Join the Isanode Movement</h2>
       <p class="lead">Be among the first to shape this new literary form.</p>
@@ -335,9 +350,50 @@ Is an ode.</pre>
         });
       }
     })();
-  </script>
+    
+    // Utility: check if all lines match when normalized
+    function isanodeCheck(inputText) {
+        // Split input into lines
+        const lines = inputText.trim().split(/\r?\n/);
 
-  <script>
+        // Normalize each line: remove non-alphanumeric chars, lowercase
+        const normalized = lines.map(line =>
+            line.replace(/[^a-z0-9]/gi, '').toLowerCase()
+        );
+        console.log('Normalized lines:', normalized);
+
+        // Compare all lines to the first
+        return normalized.every(line => line === normalized[0]);
+    }
+
+    // Wire the Check button to the isanodeCheck function and show status text
+    (function () {
+      const btn = document.getElementById('isanodeCheckBtn');
+      const input = document.getElementById('isanodeInput');
+      const status = document.getElementById('isanodeStatus');
+      if (!btn || !input || !status) return;
+
+      btn.addEventListener('click', () => {
+        try {
+          const ok = !!isanodeCheck(input.value || '');
+          if (ok) {
+            status.classList.remove('text-danger');
+            status.classList.add('text-success');
+            status.textContent = 'Isanode syntax: Good — all lines normalize to the same sequence.';
+          } else {
+            status.classList.remove('text-success');
+            status.classList.add('text-danger');
+            status.textContent = 'Isanode syntax: Bad — lines differ when normalized.';
+          }
+        } catch (err) {
+          status.classList.remove('text-success');
+          status.classList.add('text-danger');
+          status.textContent = 'Error checking isanode: ' + (err && err.message ? err.message : String(err));
+          console.error(err);
+        }
+      });
+    })();
+
     // Share to X (formerly Twitter) with a prefilled message in a new window
     (function () {
       const shareLink = document.getElementById('shareX');
