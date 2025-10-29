@@ -52,10 +52,8 @@
         <li>Optionally, hide one or more lines for readers to decipher.</li>
       </ol>
       <p>A simple example:</p>
-      <pre class="bg-body-tertiary p-3 rounded border">
-Some?
-So me!
-      </pre>
+      <pre class="bg-body-tertiary p-3 rounded border">Some?
+So me!</pre>
     </section>
 
     <section id="examples" class="mb-5">
@@ -75,16 +73,14 @@ I doat, tackle ads!
 I do attack leads.
 
 A blaze.
-Ablaze!
-      </pre>
+Ablaze!</pre>
 
       <h2 class="mt-4"><i class="fa-solid fa-puzzle-piece me-2 text-primary"></i>To Be Deciphered</h2>
       <pre class="bg-body-tertiary p-3 rounded border">
 Plane as tin sultan. Danger!
 Plan east - insult and anger.
 
-Soon, eye llama zone, at...
-      </pre>
+Soon, eye llama zone, at...</pre>
     </section>
 
     <section id="social" class="mb-5">
@@ -122,8 +118,7 @@ Soon, eye llama zone, at...
       <pre class="bg-body-tertiary p-3 rounded border">
 Isanode
 Is a node.
-Is an ode.
-      </pre>
+Is an ode.</pre>
       <p>
         Each version shares the same sequence of letters yet reveals a new layer of meaning—an elegant metaphor for thought itself.
       </p>
@@ -133,9 +128,20 @@ Is an ode.
       <h2><i class="fa-solid fa-bullhorn me-2 text-primary"></i>Join the Isanode Movement</h2>
       <p class="lead">Be among the first to shape this new literary form.</p>
       <ul class="list-unstyled">
-        <li><i class="fa-solid fa-trophy text-warning me-2"></i> Enter a contest with prizes</li>
-        <li><i class="fa-solid fa-book text-primary me-2"></i> Contribute to a future Isanode anthology</li>
-        <li><i class="fa-solid fa-users text-success me-2"></i> Inspire others to write and decipher</li>
+        <li>
+          <i class="fa-solid fa-trophy text-warning me-2"></i>
+          <!-- Trigger modal -->
+          <button id="enterContestBtn" class="btn btn-link p-0 align-baseline">Enter a contest with prizes</button>
+        </li>
+        <li>
+          <i class="fa-solid fa-trophy text-warning me-2"></i>
+          <!-- Trigger modal -->
+          <button id="contributeBtn" class="btn btn-link p-0 align-baseline">Contribute to a future Isanode anthology</button>
+        </li>
+        <li>
+          <i class="fa-solid fa-users text-success me-2"></i>
+          <a href="#" id="shareX" class="link-primary text-decoration-none">Inspire others to write and decipher</a>
+        </li>
       </ul>
       <a href="https://isanode.org" class="btn btn-primary mt-3" target="_blank">
         <i class="fa-solid fa-pencil"></i> Visit isanode.org
@@ -143,6 +149,50 @@ Is an ode.
     </section>
 
   </main>
+
+  <!-- CONTEST ENTRY MODAL -->
+  <div class="modal fade" id="contestModal" tabindex="-1" aria-labelledby="contestModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="contestModalLabel">Enter the Isanode Contest</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <form id="contestForm" novalidate>
+          <div class="modal-body">
+            <div class="mb-3">
+              <label for="contestName" class="form-label">Name</label>
+              <input type="text" class="form-control" id="contestName" name="name" required>
+              <div class="invalid-feedback">Please enter your name.</div>
+            </div>
+
+            <div class="mb-3">
+              <label for="contestEmail" class="form-label">Email</label>
+              <input type="email" class="form-control" id="contestEmail" name="email" required>
+              <div class="invalid-feedback">Please enter a valid email address.</div>
+            </div>
+
+            <div class="mb-3">
+              <label for="contestMessage" class="form-label">Message</label>
+              <textarea class="form-control" id="contestMessage" name="message" rows="3"></textarea>
+            </div>
+
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="true" id="isEntryCheckbox" name="isEntry">
+              <label class="form-check-label" for="isEntryCheckbox">
+                This submission is an entry to the Isanode contest
+              </label>
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+            <button type="submit" class="btn btn-primary">Submit Entry</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
 
   <!-- FOOTER -->
   <footer class="bg-dark text-white text-center py-4">
@@ -169,6 +219,115 @@ Is an ode.
       localStorage.setItem('theme', next);
       themeIcon.className = next === 'dark' ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
     });
+  </script>
+
+  <!-- CONTEST MODAL SCRIPT -->
+  <script>
+    (function () {
+      const enterBtn = document.getElementById('enterContestBtn');
+      const contestModalEl = document.getElementById('contestModal');
+      const contestForm = document.getElementById('contestForm');
+
+      if (!enterBtn || !contestModalEl || !contestForm) return;
+
+      const contestModal = new bootstrap.Modal(contestModalEl, { keyboard: true });
+
+      enterBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        contestModal.show();
+        // focus first input for accessibility
+        setTimeout(() => document.getElementById('contestName').focus(), 50);
+      });
+
+      // Basic client-side validation and mock submit
+      contestForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        // reset validation state
+        const form = contestForm;
+        const name = form.querySelector('#contestName');
+        const email = form.querySelector('#contestEmail');
+        const message = form.querySelector('#contestMessage');
+        const isEntry = form.querySelector('#isEntryCheckbox');
+
+        let valid = true;
+        if (!name.value.trim()) {
+          name.classList.add('is-invalid');
+          valid = false;
+        } else {
+          name.classList.remove('is-invalid');
+        }
+
+        // simple email check
+        const emailVal = email.value.trim();
+        const emailOk = emailVal.length > 3 && /.+@.+\..+/.test(emailVal);
+        if (!emailOk) {
+          email.classList.add('is-invalid');
+          valid = false;
+        } else {
+          email.classList.remove('is-invalid');
+        }
+
+        if (!valid) return;
+
+        // Build payload
+        const payload = {
+          name: name.value.trim(),
+          email: email.value.trim(),
+          message: message.value.trim(),
+          isEntry: !!isEntry.checked,
+          submittedAt: new Date().toISOString()
+        };
+
+        // For now, mock the submission: log to console and show a simple success state.
+        console.log('Contest submission:', payload);
+
+        // Replace modal body with a success message
+        const modalBody = contestModalEl.querySelector('.modal-body');
+        const modalFooter = contestModalEl.querySelector('.modal-footer');
+        modalBody.innerHTML = `<p class="mb-0">Thank you, <strong>${escapeHtml(payload.name)}</strong>! Your submission has been received${payload.isEntry ? ' as a contest entry.' : '.'}</p>`;
+        modalFooter.innerHTML = '<button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>';
+
+        // Optionally: here you would send payload to your server via fetch()
+        // fetch('/api/contest', { method: 'POST', headers:{ 'Content-Type':'application/json' }, body: JSON.stringify(payload) })...
+
+        // After a short delay, automatically close modal
+        setTimeout(() => contestModal.hide(), 1200);
+      });
+
+      // Utility: escape HTML for insertion
+      function escapeHtml(str) {
+        return String(str).replace(/[&<>"']/g, function (s) {
+          return ({
+            '&': '&amp;',
+            '<': '&lt;',
+            '>': '&gt;',
+            '"': '&quot;',
+            "'": '&#39;'
+          })[s];
+        });
+      }
+    })();
+  </script>
+
+  <script>
+    // Share to X (formerly Twitter) with a prefilled message in a new window
+    (function () {
+      const shareLink = document.getElementById('shareX');
+      if (!shareLink) return;
+
+      shareLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        const message = encodeURIComponent("Check out #Isanode — a new form of quasi-encryptic poetry. Try writing one and share your favorite lines! https://isanode.org");
+        const url = `https://x.com/intent/tweet?text=${message}`;
+
+        // Open a small centered window
+        const width = 600, height = 420;
+        const left = Math.round((screen.width - width) / 2);
+        const top = Math.round((screen.height - height) / 2);
+        window.open(url, 'shareX', `toolbar=0,status=0,resizable=1,width=${width},height=${height},left=${left},top=${top}`);
+      });
+    })();
   </script>
 
 </body>
