@@ -1,64 +1,76 @@
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="auto">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Isanode — The New Form of Quasi-Encryptic Poetry</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Isanode — The New Form of Quasi-Encryptic Poetry</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="isanode" />
+    <link rel="manifest" href="/site.webmanifest" />
 </head>
 
 <body class="bg-body text-body">
 
-  <!-- HEADER -->
-  <header class="bg-primary text-white text-center py-5 position-relative">
-    <div class="container">
-      <h1 class="display-4 fw-bold">Isanode</h1>
-      <p class="lead mb-4">The new form of quasi-encryptic poetry for the modern mind.</p>
-      <a href="#examples" class="btn btn-light btn-lg"><i class="fa-solid fa-pen-nib me-2"></i>Explore Examples</a>
-    </div>
+    <!-- HEADER -->
+    <header class="bg-primary text-white text-center py-5 position-relative">
+        <div class="container">
+            <h1 class="display-4 fw-bold">Isanode</h1>
+            <p class="lead mb-4">The new form of quasi-encryptic poetry for the modern mind.</p>
+            <a href="#examples" class="btn btn-light btn-lg"><i class="fa-solid fa-pen-nib me-2"></i>Explore
+                Examples</a>
+        </div>
 
-    <!-- THEME TOGGLE BUTTON -->
-    <div class="position-absolute top-0 end-0 p-3">
-      <button id="themeToggle" class="btn btn-light border rounded-circle" title="Toggle light/dark theme">
-        <i id="themeIcon" class="fa-solid fa-moon"></i>
-      </button>
-    </div>
-  </header>
+        <!-- THEME TOGGLE BUTTON -->
+        <div class="position-absolute top-0 end-0 p-3">
+            <button id="themeToggle" class="btn btn-light border rounded-circle" title="Toggle light/dark theme">
+                <i id="themeIcon" class="fa-solid fa-moon"></i>
+            </button>
+        </div>
+    </header>
 
-  <!-- MAIN CONTENT -->
-  <main class="container my-5">
+    <!-- MAIN CONTENT -->
+    <main class="container my-5">
 
-    <section id="intro" class="mb-5">
-      <h2><i class="fa-solid fa-book-open me-2 text-primary"></i>What is an Isanode?</h2>
-      <p>
-        An <strong>isanode</strong> is a complex form of quasi-encryptic poetry or writing. It can express any thought or feeling,
-        appearing either as a complete work or as a puzzle to be deciphered by the reader.
-      </p>
-      <p>
-        Writing a captivating isanode challenges both writer and reader. The writer must create a grammatically sound, meaningful
-        composition that conceals further layers—called the <em>array</em>. The reader’s task is to reveal these layers by regrouping
-        letters without changing their order, only adjusting spaces and punctuation.
-      </p>
-    </section>
+        <section id="intro" class="mb-5">
+            <h2><i class="fa-solid fa-book-open me-2 text-primary"></i>What is an Isanode?</h2>
+            <p>
+                An <strong>isanode</strong> is a complex form of quasi-encryptic poetry or writing. It can express any
+                thought or feeling,
+                appearing either as a complete work or as a puzzle to be deciphered by the reader.
+            </p>
+            <p>
+                Writing a captivating isanode challenges both writer and reader. The writer must create a grammatically
+                sound, meaningful
+                composition that conceals further layers—called the <em>array</em>. The reader’s task is to reveal these
+                layers by regrouping
+                letters without changing their order, only adjusting spaces and punctuation.
+            </p>
+        </section>
 
-    <section id="how" class="mb-5">
-      <h2><i class="fa-solid fa-lightbulb me-2 text-primary"></i>How to Create an Isanode</h2>
-      <ol>
-        <li>Write a single, properly spaced and punctuated line that expresses an idea.</li>
-        <li>Regroup the same letters—keeping their order—to form new, meaningful lines (the <strong>array</strong>).</li>
-        <li>Conceivably, ensure each line connects in theme or meaning to the first.</li>
-        <li>Optionally, hide one or more lines for readers to decipher upon observation.</li>
-      </ol>
-      <p>A simple example:</p>
-      <pre class="bg-body-tertiary p-3 rounded border">Some?
+        <section id="how" class="mb-5">
+            <h2><i class="fa-solid fa-lightbulb me-2 text-primary"></i>How to Create an Isanode</h2>
+            <ol>
+                <li>Write a single, properly spaced and punctuated line that expresses an idea.</li>
+                <li>Regroup the same letters—keeping their order—to form new, meaningful lines (the
+                    <strong>array</strong>).</li>
+                <li>Conceivably, ensure each line connects in theme or meaning to the first.</li>
+                <li>Optionally, hide one or more lines for readers to decipher upon observation.</li>
+            </ol>
+            <p>A simple example:</p>
+            <pre class="bg-body-tertiary p-3 rounded border">Some?
 So me!</pre>
-    </section>
+        </section>
 
-    <section id="examples" class="mb-5">
-      <h2><i class="fa-solid fa-feather-pointed me-2 text-primary"></i>Notable Isanodes (Completed)</h2>
-      <pre class="bg-body-tertiary p-3 rounded border">
+        <section id="examples" class="mb-5">
+            <h2><i class="fa-solid fa-feather-pointed me-2 text-primary"></i>Notable Isanodes (Completed)</h2>
+            <pre class="bg-body-tertiary p-3 rounded border">
 Isanode
 Is a node.
 Is an ode.
@@ -75,340 +87,350 @@ I do attack leads.
 A blaze.
 Ablaze!</pre>
 
-      <h2 class="mt-4"><i class="fa-solid fa-puzzle-piece me-2 text-primary"></i>To Be Deciphered</h2>
-      <pre class="bg-body-tertiary p-3 rounded border">
+            <h2 class="mt-4"><i class="fa-solid fa-puzzle-piece me-2 text-primary"></i>To Be Deciphered</h2>
+            <pre class="bg-body-tertiary p-3 rounded border">
 Plane as tin sultan. Danger!
 Plan east - insult and anger.
 
 Soon, eye llama zone, at...</pre>
-    </section>
+        </section>
 
-    <section id="social" class="mb-5">
-      <h2><i class="fas fa-clock me-2 text-primary"></i>#Isanode Moments</h2>
-      <blockquote class="blockquote">
-        <p>Anyone can <strong>#haiku</strong><br> a season of change is here<br> build an <strong>#isanode</strong></p>
-      </blockquote>
-      <blockquote class="blockquote">
-        <p>Fine #poetry is so old<br> Now it's time to <strong>#isanode</strong></p>
-      </blockquote>
-      <blockquote class="blockquote">
-        <p>A little idea from limerick<br>
-        made every man sensible sick.<br>
-        Now they want more<br>
-        than what was before.<br>
-        So, they do <strong>#isanode</strong> in lieu of #limerick.</p>
-      </blockquote>
-      <blockquote class="blockquote">
-        <p>Here lies the late #epitaph.<br>
-        Once used for a moderate laugh.<br>
-        Now it's gone forever.<br>
-        ’Cause <strong>#isanode</strong> is much more clever.</p>
-      </blockquote>
-      <blockquote class="blockquote">
-        <p>Check out this #palindrome: “No where ’er ’eh won?”<br>
-        An #Isanode does better with grammar — and makes sense.</p>
-      </blockquote>
-    </section>
+        <section id="social" class="mb-5">
+            <h2><i class="fas fa-clock me-2 text-primary"></i>#Isanode Moments</h2>
+            <blockquote class="blockquote">
+                <p>Anyone can <strong>#haiku</strong><br> a season of change is here<br> build an
+                    <strong>#isanode</strong></p>
+            </blockquote>
+            <blockquote class="blockquote">
+                <p>Fine #poetry is so old<br> Now it's time to <strong>#isanode</strong></p>
+            </blockquote>
+            <blockquote class="blockquote">
+                <p>A little idea from limerick<br>
+                    made every man sensible sick.<br>
+                    Now they want more<br>
+                    than what was before.<br>
+                    So, they do <strong>#isanode</strong> in lieu of #limerick.</p>
+            </blockquote>
+            <blockquote class="blockquote">
+                <p>Here lies the late #epitaph.<br>
+                    Once used for a moderate laugh.<br>
+                    Now it's gone forever.<br>
+                    ’Cause <strong>#isanode</strong> is much more clever.</p>
+            </blockquote>
+            <blockquote class="blockquote">
+                <p>Check out this #palindrome: “No where ’er ’eh won?”<br>
+                    An #Isanode does better with grammar — and makes sense.</p>
+            </blockquote>
+        </section>
 
-    <section id="philosophy" class="mb-5">
-      <h2><i class="fa-solid fa-quote-left me-2 text-primary"></i>The Philosophy Behind It</h2>
-      <p>
-        The word <em>isanode</em> is an example of itself. By regrouping its letters, maintaining their order, we discover:
-      </p>
-      <pre class="bg-body-tertiary p-3 rounded border">
+        <section id="philosophy" class="mb-5">
+            <h2><i class="fa-solid fa-quote-left me-2 text-primary"></i>The Philosophy Behind It</h2>
+            <p>
+                The word <em>isanode</em> is an example of itself. By regrouping its letters, maintaining their order,
+                we discover:
+            </p>
+            <pre class="bg-body-tertiary p-3 rounded border">
 Isanode
 Is a node.
 Is an ode.</pre>
-      <p>
-        Each version shares the same sequence of letters yet reveals a new layer of meaning—an elegant metaphor for thought itself.
-      </p>
-    </section>
+            <p>
+                Each version shares the same sequence of letters yet reveals a new layer of meaning—an elegant metaphor
+                for thought itself.
+            </p>
+        </section>
 
-    <section id="utility" class="mb-5">
-        <h2><i class="fa-solid fa-check me-2 text-primary"></i>Check your Isanode</h2>
-        <p>
-            Paste your <em>isanode</em> into the space below and it will be checked for proper syntax:
-        </p>
-        <div class="mb-3">
-            <textarea id="isanodeInput" class="form-control" rows="5" placeholder="Enter your isanode here...">I doat, tackle ads!
+        <section id="utility" class="mb-5">
+            <h2><i class="fa-solid fa-check me-2 text-primary"></i>Check your Isanode</h2>
+            <p>
+                Paste your <em>isanode</em> into the space below and it will be checked for proper syntax:
+            </p>
+            <div class="mb-3">
+                <textarea id="isanodeInput" class="form-control" rows="5" placeholder="Enter your isanode here...">I doat, tackle ads!
 I do attack leads.</textarea>
-            <div class="d-flex gap-2 mt-2">
-              <button id="isanodeCheckBtn" type="button" class="btn btn-sm btn-outline-primary">Check</button>
-              <div id="isanodeStatus" class="form-text text-muted" role="status" aria-live="polite">Syntax status will appear here after checking.</div>
+                <div class="d-flex gap-2 mt-2">
+                    <button id="isanodeCheckBtn" type="button" class="btn btn-sm btn-outline-primary">Check</button>
+                    <div id="isanodeStatus" class="form-text text-muted" role="status" aria-live="polite">Syntax status
+                        will appear here after checking.</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="promotion" class="text-center my-5">
+            <h2><i class="fa-solid fa-bullhorn me-2 text-primary"></i>Join the Isanode Movement</h2>
+            <p class="lead">Be among the first to shape this new literary form.</p>
+            <ul class="list-unstyled">
+                <li>
+                    <i class="fa-solid fa-trophy text-warning me-2"></i>
+                    <!-- Trigger modal -->
+                    <button id="enterContestBtn" class="btn btn-link p-0 align-baseline text-decoration-none">Enter a
+                        contest with prizes</button>
+                </li>
+                <li>
+                    <i class="fas fa-heart text-danger me-2"></i>
+                    <!-- Trigger modal -->
+                    <button id="contributeBtn" class="btn btn-link p-0 align-baseline text-decoration-none">Contribute
+                        to a future Isanode anthology</button>
+                </li>
+                <li>
+                    <i class="fab fa-twitter text-dark me-2"></i>
+                    <a href="#" id="shareX" class="link-primary text-decoration-none">Inspire others to write and
+                        decipher</a>
+                </li>
+            </ul>
+        </section>
+
+    </main>
+
+    <!-- CONTEST ENTRY MODAL -->
+    <div class="modal fade" id="contestModal" tabindex="-1" aria-labelledby="contestModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="contestModalLabel">Enter the Isanode Contest</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form id="contestForm" novalidate>
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label for="contestName" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="contestName" name="name" required>
+                            <div class="invalid-feedback">Please enter your name.</div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="contestEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="contestEmail" name="email" required>
+                            <div class="invalid-feedback">Please enter a valid email address.</div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="contestMessage" class="form-label">Message</label>
+                            <textarea class="form-control" id="contestMessage" name="message" rows="3"></textarea>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="true" id="isEntryCheckbox"
+                                name="isEntry">
+                            <label class="form-check-label" for="isEntryCheckbox">
+                                This submission is an entry to the Isanode contest
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                        <button type="submit" class="btn btn-primary">Send</button>
+                    </div>
+                </form>
             </div>
         </div>
-    </section>
-
-    <section id="promotion" class="text-center my-5">
-      <h2><i class="fa-solid fa-bullhorn me-2 text-primary"></i>Join the Isanode Movement</h2>
-      <p class="lead">Be among the first to shape this new literary form.</p>
-      <ul class="list-unstyled">
-        <li>
-          <i class="fa-solid fa-trophy text-warning me-2"></i>
-          <!-- Trigger modal -->
-          <button id="enterContestBtn" class="btn btn-link p-0 align-baseline text-decoration-none">Enter a contest with prizes</button>
-        </li>
-        <li>
-          <i class="fas fa-heart text-danger me-2"></i>
-          <!-- Trigger modal -->
-          <button id="contributeBtn" class="btn btn-link p-0 align-baseline text-decoration-none">Contribute to a future Isanode anthology</button>
-        </li>
-        <li>
-          <i class="fab fa-twitter text-dark me-2"></i>
-          <a href="#" id="shareX" class="link-primary text-decoration-none">Inspire others to write and decipher</a>
-        </li>
-      </ul>
-    </section>
-
-  </main>
-
-  <!-- CONTEST ENTRY MODAL -->
-  <div class="modal fade" id="contestModal" tabindex="-1" aria-labelledby="contestModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="contestModalLabel">Enter the Isanode Contest</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <form id="contestForm" novalidate>
-          <div class="modal-body">
-            <div class="mb-3">
-              <label for="contestName" class="form-label">Name</label>
-              <input type="text" class="form-control" id="contestName" name="name" required>
-              <div class="invalid-feedback">Please enter your name.</div>
-            </div>
-
-            <div class="mb-3">
-              <label for="contestEmail" class="form-label">Email</label>
-              <input type="email" class="form-control" id="contestEmail" name="email" required>
-              <div class="invalid-feedback">Please enter a valid email address.</div>
-            </div>
-
-            <div class="mb-3">
-              <label for="contestMessage" class="form-label">Message</label>
-              <textarea class="form-control" id="contestMessage" name="message" rows="3"></textarea>
-            </div>
-
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="true" id="isEntryCheckbox" name="isEntry">
-              <label class="form-check-label" for="isEntryCheckbox">
-                This submission is an entry to the Isanode contest
-              </label>
-            </div>
-          </div>
-
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-            <button type="submit" class="btn btn-primary">Send</button>
-          </div>
-        </form>
-      </div>
     </div>
-  </div>
 
-  <!-- FOOTER -->
-  <footer class="bg-dark text-white text-center py-4">
-    <p class="mb-1">© 2025 <a href="https://isanode.org" class="text-white text-decoration-underline">isanode.org</a></p>
-    <p class="mb-0"><i class="fa-solid fa-infinity"></i> Poetry in evolution</p>
-  </footer>
+    <!-- FOOTER -->
+    <footer class="bg-dark text-white text-center py-4">
+        <p class="mb-1">© 2025 <a href="https://isanode.org"
+                class="text-white text-decoration-underline">isanode.org</a></p>
+        <p class="mb-0"><i class="fa-solid fa-infinity"></i> Poetry in evolution</p>
+    </footer>
 
-  <!-- THEME TOGGLE SCRIPT -->
-  <script>
-    const themeToggle = document.getElementById('themeToggle');
-    const themeIcon = document.getElementById('themeIcon');
-    const root = document.documentElement;
+    <!-- THEME TOGGLE SCRIPT -->
+    <script>
+        const themeToggle = document.getElementById('themeToggle');
+        const themeIcon = document.getElementById('themeIcon');
+        const root = document.documentElement;
 
-    // Load saved preference
-    if (localStorage.getItem('theme')) {
-      root.setAttribute('data-bs-theme', localStorage.getItem('theme'));
-      themeIcon.className = localStorage.getItem('theme') === 'dark' ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
-    }
-
-    themeToggle.addEventListener('click', () => {
-      const current = root.getAttribute('data-bs-theme');
-      const next = current === 'dark' ? 'light' : 'dark';
-      root.setAttribute('data-bs-theme', next);
-      localStorage.setItem('theme', next);
-      themeIcon.className = next === 'dark' ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
-    });
-  </script>
-
-  <!-- CONTEST MODAL SCRIPT -->
-  <script>
-    (function () {
-      const enterBtn = document.getElementById('enterContestBtn');
-      const contributeBtn = document.getElementById('contributeBtn');
-      const contestModalEl = document.getElementById('contestModal');
-      const contestForm = document.getElementById('contestForm');
-
-      // If the modal or form is missing, don't try to wire buttons but don't break UI
-      if (!contestModalEl || !contestForm) return;
-
-      const contestModal = new bootstrap.Modal(contestModalEl, { keyboard: true });
-
-      // Keep originals so we can restore the form after showing success
-      const originalModalBody = contestModalEl.querySelector('.modal-body') ? contestModalEl.querySelector('.modal-body').innerHTML : '';
-      const originalModalFooter = contestModalEl.querySelector('.modal-footer') ? contestModalEl.querySelector('.modal-footer').innerHTML : '';
-
-      function openContestModal(defaultEntry) {
-        // Restore original form HTML (in case it was replaced after submit)
-        if (originalModalBody) contestModalEl.querySelector('.modal-body').innerHTML = originalModalBody;
-        if (originalModalFooter) contestModalEl.querySelector('.modal-footer').innerHTML = originalModalFooter;
-
-        // Clear validation state
-        const nameEl = contestForm.querySelector('#contestName');
-        const emailEl = contestForm.querySelector('#contestEmail');
-        if (nameEl) nameEl.classList.remove('is-invalid');
-        if (emailEl) emailEl.classList.remove('is-invalid');
-
-        // Set the checkbox default depending on caller
-        const isEntryCheckbox = contestForm.querySelector('#isEntryCheckbox');
-        if (isEntryCheckbox) isEntryCheckbox.checked = !!defaultEntry;
-
-        contestModal.show();
-        setTimeout(() => {
-          const focusEl = contestForm.querySelector('#contestName');
-          if (focusEl) focusEl.focus();
-        }, 50);
-      }
-
-      if (enterBtn) {
-        enterBtn.addEventListener('click', (e) => {
-          e.preventDefault();
-          openContestModal(true);
-        });
-      }
-
-      if (contributeBtn) {
-        contributeBtn.addEventListener('click', (e) => {
-          e.preventDefault();
-          openContestModal(false);
-        });
-      }
-
-      // Basic client-side validation and mock submit
-      contestForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-
-        const form = contestForm;
-        const name = form.querySelector('#contestName');
-        const email = form.querySelector('#contestEmail');
-        const message = form.querySelector('#contestMessage');
-        const isEntry = form.querySelector('#isEntryCheckbox');
-
-        let valid = true;
-        if (!name || !name.value.trim()) {
-          if (name) name.classList.add('is-invalid');
-          valid = false;
-        } else if (name) {
-          name.classList.remove('is-invalid');
+        // Load saved preference
+        if (localStorage.getItem('theme')) {
+            root.setAttribute('data-bs-theme', localStorage.getItem('theme'));
+            themeIcon.className = localStorage.getItem('theme') === 'dark' ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
         }
 
-        const emailVal = email ? email.value.trim() : '';
-        const emailOk = emailVal.length > 3 && /.+@.+\..+/.test(emailVal);
-        if (!emailOk) {
-          if (email) email.classList.add('is-invalid');
-          valid = false;
-        } else if (email) {
-          email.classList.remove('is-invalid');
-        }
-
-        if (!valid) return;
-
-        const payload = {
-          name: name.value.trim(),
-          email: email.value.trim(),
-          message: message ? message.value.trim() : '',
-          isEntry: !!(isEntry && isEntry.checked),
-          submittedAt: new Date().toISOString()
-        };
-
-        console.log('Contest submission:', payload);
-
-        // Show success in modal and offer close
-        const modalBody = contestModalEl.querySelector('.modal-body');
-        const modalFooter = contestModalEl.querySelector('.modal-footer');
-        if (modalBody) modalBody.innerHTML = `<p class="mb-0">Thank you, <strong>${escapeHtml(payload.name)}</strong>! Your submission has been received${payload.isEntry ? ' as a contest entry.' : '.'}</p>`;
-        if (modalFooter) modalFooter.innerHTML = '<button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>';
-
-        setTimeout(() => contestModal.hide(), 1500);
-      });
-
-      // Utility: escape HTML for insertion
-      function escapeHtml(str) {
-        return String(str).replace(/[&<>"']/g, function (s) {
-          return ({
-            '&': '&amp;',
-            '<': '&lt;',
-            '>': '&gt;',
-            '"': '&quot;',
-            "'": '&#39;'
-          })[s];
+        themeToggle.addEventListener('click', () => {
+            const current = root.getAttribute('data-bs-theme');
+            const next = current === 'dark' ? 'light' : 'dark';
+            root.setAttribute('data-bs-theme', next);
+            localStorage.setItem('theme', next);
+            themeIcon.className = next === 'dark' ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
         });
-      }
-    })();
-    
-    // Utility: check if all lines match when normalized
-    function isanodeCheck(inputText) {
-        // Split input into lines
-        const lines = inputText.trim().split(/\r?\n/);
+    </script>
 
-        // Normalize each line: remove non-alphanumeric chars, lowercase
-        const normalized = lines.map(line =>
-            line.replace(/[^a-z0-9]/gi, '').toLowerCase()
-        );
-        console.log('Normalized lines:', normalized);
+    <!-- CONTEST MODAL SCRIPT -->
+    <script>
+        (function () {
+            const enterBtn = document.getElementById('enterContestBtn');
+            const contributeBtn = document.getElementById('contributeBtn');
+            const contestModalEl = document.getElementById('contestModal');
+            const contestForm = document.getElementById('contestForm');
 
-        // Compare all lines to the first
-        return normalized.every(line => line === normalized[0]);
-    }
+            // If the modal or form is missing, don't try to wire buttons but don't break UI
+            if (!contestModalEl || !contestForm) return;
 
-    // Wire the Check button to the isanodeCheck function and show status text
-    (function () {
-      const btn = document.getElementById('isanodeCheckBtn');
-      const input = document.getElementById('isanodeInput');
-      const status = document.getElementById('isanodeStatus');
-      if (!btn || !input || !status) return;
+            const contestModal = new bootstrap.Modal(contestModalEl, { keyboard: true });
 
-      btn.addEventListener('click', () => {
-        try {
-          const ok = !!isanodeCheck(input.value || '');
-          if (ok) {
-            status.classList.remove('text-danger');
-            status.classList.add('text-success');
-            status.textContent = 'Isanode syntax: Good — all lines normalize to the same sequence.';
-          } else {
-            status.classList.remove('text-success');
-            status.classList.add('text-danger');
-            status.textContent = 'Isanode syntax: Bad — lines differ when normalized.';
-          }
-        } catch (err) {
-          status.classList.remove('text-success');
-          status.classList.add('text-danger');
-          status.textContent = 'Error checking isanode: ' + (err && err.message ? err.message : String(err));
-          console.error(err);
+            // Keep originals so we can restore the form after showing success
+            const originalModalBody = contestModalEl.querySelector('.modal-body') ? contestModalEl.querySelector('.modal-body').innerHTML : '';
+            const originalModalFooter = contestModalEl.querySelector('.modal-footer') ? contestModalEl.querySelector('.modal-footer').innerHTML : '';
+
+            function openContestModal(defaultEntry) {
+                // Restore original form HTML (in case it was replaced after submit)
+                if (originalModalBody) contestModalEl.querySelector('.modal-body').innerHTML = originalModalBody;
+                if (originalModalFooter) contestModalEl.querySelector('.modal-footer').innerHTML = originalModalFooter;
+
+                // Clear validation state
+                const nameEl = contestForm.querySelector('#contestName');
+                const emailEl = contestForm.querySelector('#contestEmail');
+                if (nameEl) nameEl.classList.remove('is-invalid');
+                if (emailEl) emailEl.classList.remove('is-invalid');
+
+                // Set the checkbox default depending on caller
+                const isEntryCheckbox = contestForm.querySelector('#isEntryCheckbox');
+                if (isEntryCheckbox) isEntryCheckbox.checked = !!defaultEntry;
+
+                contestModal.show();
+                setTimeout(() => {
+                    const focusEl = contestForm.querySelector('#contestName');
+                    if (focusEl) focusEl.focus();
+                }, 50);
+            }
+
+            if (enterBtn) {
+                enterBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    openContestModal(true);
+                });
+            }
+
+            if (contributeBtn) {
+                contributeBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    openContestModal(false);
+                });
+            }
+
+            // Basic client-side validation and mock submit
+            contestForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+
+                const form = contestForm;
+                const name = form.querySelector('#contestName');
+                const email = form.querySelector('#contestEmail');
+                const message = form.querySelector('#contestMessage');
+                const isEntry = form.querySelector('#isEntryCheckbox');
+
+                let valid = true;
+                if (!name || !name.value.trim()) {
+                    if (name) name.classList.add('is-invalid');
+                    valid = false;
+                } else if (name) {
+                    name.classList.remove('is-invalid');
+                }
+
+                const emailVal = email ? email.value.trim() : '';
+                const emailOk = emailVal.length > 3 && /.+@.+\..+/.test(emailVal);
+                if (!emailOk) {
+                    if (email) email.classList.add('is-invalid');
+                    valid = false;
+                } else if (email) {
+                    email.classList.remove('is-invalid');
+                }
+
+                if (!valid) return;
+
+                const payload = {
+                    name: name.value.trim(),
+                    email: email.value.trim(),
+                    message: message ? message.value.trim() : '',
+                    isEntry: !!(isEntry && isEntry.checked),
+                    submittedAt: new Date().toISOString()
+                };
+
+                console.log('Contest submission:', payload);
+
+                // Show success in modal and offer close
+                const modalBody = contestModalEl.querySelector('.modal-body');
+                const modalFooter = contestModalEl.querySelector('.modal-footer');
+                if (modalBody) modalBody.innerHTML = `<p class="mb-0">Thank you, <strong>${escapeHtml(payload.name)}</strong>! Your submission has been received${payload.isEntry ? ' as a contest entry.' : '.'}</p>`;
+                if (modalFooter) modalFooter.innerHTML = '<button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>';
+
+                setTimeout(() => contestModal.hide(), 1500);
+            });
+
+            // Utility: escape HTML for insertion
+            function escapeHtml(str) {
+                return String(str).replace(/[&<>"']/g, function (s) {
+                    return ({
+                        '&': '&amp;',
+                        '<': '&lt;',
+                        '>': '&gt;',
+                        '"': '&quot;',
+                        "'": '&#39;'
+                    })[s];
+                });
+            }
+        })();
+
+        // Utility: check if all lines match when normalized
+        function isanodeCheck(inputText) {
+            // Split input into lines
+            const lines = inputText.trim().split(/\r?\n/);
+
+            // Normalize each line: remove non-alphanumeric chars, lowercase
+            const normalized = lines.map(line =>
+                line.replace(/[^a-z0-9]/gi, '').toLowerCase()
+            );
+            console.log('Normalized lines:', normalized);
+
+            // Compare all lines to the first
+            return normalized.every(line => line === normalized[0]);
         }
-      });
-    })();
 
-    // Share to X (formerly Twitter) with a prefilled message in a new window
-    (function () {
-      const shareLink = document.getElementById('shareX');
-      if (!shareLink) return;
+        // Wire the Check button to the isanodeCheck function and show status text
+        (function () {
+            const btn = document.getElementById('isanodeCheckBtn');
+            const input = document.getElementById('isanodeInput');
+            const status = document.getElementById('isanodeStatus');
+            if (!btn || !input || !status) return;
 
-      shareLink.addEventListener('click', (e) => {
-        e.preventDefault();
-        const message = encodeURIComponent("Check out #Isanode — a new form of quasi-encryptic poetry. Try writing one and share your favorite lines! https://isanode.org");
-        const url = `https://x.com/intent/tweet?text=${message}`;
+            btn.addEventListener('click', () => {
+                try {
+                    const ok = !!isanodeCheck(input.value || '');
+                    if (ok) {
+                        status.classList.remove('text-danger');
+                        status.classList.add('text-success');
+                        status.textContent = 'Isanode syntax: Good — all lines normalize to the same sequence.';
+                    } else {
+                        status.classList.remove('text-success');
+                        status.classList.add('text-danger');
+                        status.textContent = 'Isanode syntax: Bad — lines differ when normalized.';
+                    }
+                } catch (err) {
+                    status.classList.remove('text-success');
+                    status.classList.add('text-danger');
+                    status.textContent = 'Error checking isanode: ' + (err && err.message ? err.message : String(err));
+                    console.error(err);
+                }
+            });
+        })();
 
-        // Open a small centered window
-        const width = 600, height = 420;
-        const left = Math.round((screen.width - width) / 2);
-        const top = Math.round((screen.height - height) / 2);
-        window.open(url, 'shareX', `toolbar=0,status=0,resizable=1,width=${width},height=${height},left=${left},top=${top}`);
-      });
-    })();
-  </script>
+        // Share to X (formerly Twitter) with a prefilled message in a new window
+        (function () {
+            const shareLink = document.getElementById('shareX');
+            if (!shareLink) return;
+
+            shareLink.addEventListener('click', (e) => {
+                e.preventDefault();
+                const message = encodeURIComponent("Check out #Isanode — a new form of quasi-encryptic poetry. Try writing one and share your favorite lines! https://isanode.org");
+                const url = `https://x.com/intent/tweet?text=${message}`;
+
+                // Open a small centered window
+                const width = 600, height = 420;
+                const left = Math.round((screen.width - width) / 2);
+                const top = Math.round((screen.height - height) / 2);
+                window.open(url, 'shareX', `toolbar=0,status=0,resizable=1,width=${width},height=${height},left=${left},top=${top}`);
+            });
+        })();
+    </script>
 
 </body>
+
 </html>
