@@ -84,19 +84,23 @@ I doat, tackle ads!
 I do attack leads.</pre>
 
             <h2 class="mt-4"><i class="fa-solid fa-puzzle-piece me-2 text-primary"></i>To Be Deciphered</h2>
-            <pre class="bg-body-tertiary p-3 rounded border">
+            <pre id="puzzlePre" class="bg-body-tertiary p-3 rounded border">
 Plane as tin sultan. Danger!
 [to be deciphered]
 
 Soon. Eye llama zone, at...
 [to be deciphered]</pre>
 
-            <pre class="bg-body-tertiary p-3 rounded border d-none">
+            <pre id="solutionPre" class="bg-body-tertiary p-3 rounded border d-none">
 Plane as tin sultan. Danger!
 Plan east? Insult and anger.
 
 Soon. Eye llama zone, at...
 So one yell, "Amazon eat!"</pre>
+
+            <div class="text-end mt-2">
+                <button id="toggleSolutionBtn" type="button" class="btn btn-sm btn-outline-secondary">Reveal solution</button>
+            </div>
         </section>
 
         <section id="social" class="mb-5">
@@ -432,6 +436,37 @@ I do attack leads.</textarea>
                 const top = Math.round((screen.height - height) / 2);
                 window.open(url, 'shareX', `toolbar=0,status=0,resizable=1,width=${width},height=${height},left=${left},top=${top}`);
             });
+        })();
+
+        // Toggle puzzle / solution visibility for the 'To Be Deciphered' examples
+        (function () {
+            const btn = document.getElementById('toggleSolutionBtn');
+            const puzzle = document.getElementById('puzzlePre');
+            const solution = document.getElementById('solutionPre');
+            if (!btn || !puzzle || !solution) return;
+
+            const updateButton = () => {
+                const showingSolution = !solution.classList.contains('d-none');
+                btn.textContent = showingSolution ? 'Hide solution' : 'Reveal solution';
+                btn.setAttribute('aria-expanded', String(showingSolution));
+            };
+
+            btn.addEventListener('click', () => {
+                const showingSolution = !solution.classList.contains('d-none');
+                if (showingSolution) {
+                    // hide solution, show puzzle
+                    solution.classList.add('d-none');
+                    puzzle.classList.remove('d-none');
+                } else {
+                    // show solution, hide puzzle
+                    solution.classList.remove('d-none');
+                    puzzle.classList.add('d-none');
+                }
+                updateButton();
+            });
+
+            // initialize button text
+            updateButton();
         })();
     </script>
 
