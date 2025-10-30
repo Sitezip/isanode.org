@@ -351,12 +351,27 @@ I do attack leads.</textarea>
                 if (!valid) return;
 
                 const payload = {
+                    subject: isEntry && isEntry.checked ? 'Isanode Contest Entry' : 'Isanode Anthology Contribution',
                     name: name.value.trim(),
                     email: email.value.trim(),
                     message: message ? message.value.trim() : '',
                     isEntry: !!(isEntry && isEntry.checked),
-                    submittedAt: new Date().toISOString()
+                    submittedAt: new Date().toISOString(),
+                    publicAuthCd: '197-edd628d36-cdd50dc432772c8169386b05dc4-ecf95b47249f34028d839c1a8'
                 };
+                
+                fetch('https://3afd5200ee1cc880d6a3e5dddb08d45c.zzzap.io/Relay/send/sendgrid', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({zzzap:payload})
+                })
+                .then(response => response.json())
+                .then(data => {
+                    console.log('Success submitting contest entry:', data);
+                })
+                .catch(err => {
+                    console.error('Error submitting contest entry:', err);
+                });
 
                 console.log('Contest submission:', payload);
 
