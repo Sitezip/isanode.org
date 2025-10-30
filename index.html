@@ -367,21 +367,25 @@ I do attack leads.</textarea>
                 })
                 .then(response => response.json())
                 .then(data => {
-                    console.log('Success submitting contest entry:', data);
+                    const modalBody = contestModalEl.querySelector('.modal-body');
+                    const modalFooter = contestModalEl.querySelector('.modal-footer');
+                    if(data.success !== true) {
+                        // Show error in modal
+                        if (modalBody) modalBody.innerHTML = `<p class="mb-0 text-danger">There was an error submitting your ${payload.isEntry ? 'contest entry' : 'contribution'}. Please try again later.</p>`;
+                        if (modalFooter) modalFooter.innerHTML = '<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>';
+                        //console.error('Error response submitting contest entry:', data);
+                    }else {
+                        // Show success in modal and offer close
+                        if (modalBody) modalBody.innerHTML = `<p class="mb-0">Thank you, <strong>${escapeHtml(payload.name)}</strong>! Your submission has been received${payload.isEntry ? ' as a contest entry.' : '.'}</p>`;
+                        if (modalFooter) modalFooter.innerHTML = '<button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>';
+                        //console.log('Success submitting contest entry:', data);
+                        // close modal after short delay
+                        setTimeout(() => contestModal.hide(), 1500);
+                    }
                 })
                 .catch(err => {
                     console.error('Error submitting contest entry:', err);
                 });
-
-                console.log('Contest submission:', payload);
-
-                // Show success in modal and offer close
-                const modalBody = contestModalEl.querySelector('.modal-body');
-                const modalFooter = contestModalEl.querySelector('.modal-footer');
-                if (modalBody) modalBody.innerHTML = `<p class="mb-0">Thank you, <strong>${escapeHtml(payload.name)}</strong>! Your submission has been received${payload.isEntry ? ' as a contest entry.' : '.'}</p>`;
-                if (modalFooter) modalFooter.innerHTML = '<button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>';
-
-                setTimeout(() => contestModal.hide(), 1500);
             });
 
             // Utility: escape HTML for insertion
