@@ -14,6 +14,27 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <meta name="apple-mobile-web-app-title" content="isanode" />
     <link rel="manifest" href="/site.webmanifest" />
+    <style>
+        .text-transition {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+        .text-transition span {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+        }
+        .text-transition span.active {
+            position: relative;
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
 </head>
 
 <body class="bg-body text-body">
@@ -21,7 +42,13 @@
     <!-- HEADER -->
     <header class="bg-primary text-white text-center py-5 position-relative">
         <div class="container">
-            <h1 class="display-4 fw-bold">Isanode</h1>
+            <h1 class="display-4 fw-bold">
+                <div class="text-transition">
+                    <span class="active">Isanode</span>
+                    <span>Is a node</span>
+                    <span>Is an ode</span>
+                </div>
+            </h1>
             <p class="lead mb-4">The novel form of quasi-cryptic poetry for the modern mind.</p>
             <a href="#examples" class="btn btn-light btn-lg"><i class="fas fa-pen-nib me-2"></i>Explore
                 Examples</a>
@@ -260,6 +287,34 @@ I do attack leads.</textarea>
             localStorage.setItem('theme', next);
             themeIcon.className = next === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
         });
+    </script>
+
+    <!-- HEADER TEXT TRANSITION -->
+    <script>
+        (function() {
+            const container = document.querySelector('.text-transition');
+            if (!container) return;
+
+            const spans = container.querySelectorAll('span');
+            let currentIndex = 0;
+            const totalSpans = spans.length;
+            
+            function cycleText() {
+                // Remove active class from current span
+                spans[currentIndex].classList.remove('active');
+                
+                // Move to next span
+                currentIndex = (currentIndex + 1) % totalSpans;
+                
+                // Add active class to new current span
+                spans[currentIndex].classList.add('active');
+            }
+
+            // Start cycling after a delay
+            setTimeout(() => {
+                setInterval(cycleText, 3000); // Change text every 3 seconds
+            }, 5000); // Start after 5 seconds
+        })();
     </script>
 
     <!-- CONTEST MODAL SCRIPT -->
